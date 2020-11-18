@@ -14,7 +14,7 @@ export default function Header() {
       </div>
       <div className={styles.logo} >
         <div tabIndex="0" role="link">
-        <span tabIndex="-1">SITE LOGO</span>
+          <span tabIndex="-1">SITE LOGO</span>
         </div>
       </div>
       <div className={styles.settings} >
