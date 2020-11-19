@@ -6,7 +6,7 @@ export default function Header() {
       <div className={styles.menus} >
         <ul>
         {['Home', 'Community'].map(menu => {
-          return <li>
+          return <li key={menu}>
             <a href="#">{menu}</a>
           </li>
         })}
@@ -19,8 +19,8 @@ export default function Header() {
       </div>
       <div className={styles.settings} >
         <ul>
-          {['ic', 'ic', 'Video'].map(setting => {
-            return <li role="link" tabIndex="0">
+          {['ic', 'ic1', 'Video'].map(setting => {
+            return <li role="link" key={setting} tabIndex="0">
               <span tabIndex="-1">{setting}</span>
             </li>
           })}

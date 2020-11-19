@@ -1,13 +1,17 @@
 import '../styles/globals.css'
 import Head from 'next/head'
-import NewRelicSnippet from '../components/shared/newrelic/newrelic'
 
 function MyApp({ Component, pageProps }) {
+
+  const newRelicSrc = '/newrelic.js';
+
   return <>
-  <Head>
-      <NewRelicSnippet />
-  </Head>
   <Component {...pageProps} />
+
+  <Head>
+        <script type = "text/javascript" src={newRelicSrc} />
+  </Head>
+
   </>
 }
 
