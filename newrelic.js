@@ -5,15 +5,17 @@
  * See lib/config/default.js in the agent distribution for a more complete
  * description of configuration variables and their potential values.
  */
+
+
 exports.config = {
   /**
    * Array of application names.
    */
-  app_name: ['My Galaxy Applicaiton'],
+  app_name: [process.env.NEW_RELIC_APP_NAME],
   /**
    * Your New Relic license key.
    */
-  license_key: 'da247e14bbeeee601edc80c9b02ab780FFFFNRAL',
+  license_key: process.env.NEW_RELIC_LICENCE_KEY,
   /**
    * This setting controls distributed tracing.
    * Distributed tracing lets you see the path that a request takes through your

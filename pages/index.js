@@ -4,7 +4,7 @@ import Header from '../components/shared/header/header'
 
 export default function Home() {
   
-  
+  console.log('process', process.env.DB_HOST)
   return (
     <div className={styles.container}>
       <Head>

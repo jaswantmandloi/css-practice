@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import Head from 'next/head'
+import NewRelic from '../components/shared/newrelic/newrelic'
 
 function MyApp({ Component, pageProps }) {
 
@@ -8,10 +8,7 @@ function MyApp({ Component, pageProps }) {
   return <>
   <Component {...pageProps} />
 
-  <Head>
-        <script type = "text/javascript" src={newRelicSrc} />
-  </Head>
-
+  <NewRelic></NewRelic>
   </>
 }
 
