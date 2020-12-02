@@ -1,21 +1,27 @@
 import {useRef, useEffect} from 'react'
 
-export const TrapFocus = ({
-        children, isActive = true
+const TrapTap = ({
+        children, 
+        isActive = true,
+        trapperName
     }) => {
 
     const nodeToRestore = useRef();
     const sentinelStart = useRef(null);
     const sentinelEnd = useRef(null);
 
+    
+
     useEffect(() => {
 
         const loopFocus = (event) => {
             
             // 9 = Tab
-            if (event.keyCode !== 9) {
+            if (!isActive || event.keyCode !== 9) {
                 return;
             }
+
+            console.log('trapperName', trapperName)
 
 
             if (sentinelEnd.current === document.activeElement) {
@@ -57,3 +63,4 @@ export const TrapFocus = ({
     
 }
 
+export default TrapTap
