@@ -1,6 +1,10 @@
 
 import styles from './LeftMenus.module.scss'
-import {useKeyPress} from '../megaMenuCustomUtils'
+import {
+  useKeyPressEvent,
+  KEYS,
+  useMutationObservation
+} from '../megaMenuCustomUtils'
 import {useState, useEffect, useRef} from 'react'
 
 export default function LeftMenus({
@@ -16,36 +20,23 @@ export default function LeftMenus({
   // const [hovered, setHovered] = useState(undefined);
 
   const [cursor, setCursor] = useState(0);
-  const downPress = useKeyPress("ArrowDown");
-  const upPress = useKeyPress("ArrowUp");
-  const rightPress = useKeyPress("ArrowRight");
-  const leftPress = useKeyPress("ArrowLeft");
+  const {key, lastUpdateTime} = useKeyPressEvent([
+    KEYS.ARROW_DOWN,
+    KEYS.ARROW_UP,
+    KEYS.ARROW_RIGHT,
+    KEYS.ARROW_LEFT
+  ])
+  const downPress = key === KEYS.ARROW_DOWN;
+  const upPress = key === KEYS.ARROW_UP;
+  const rightPress = key === KEYS.ARROW_RIGHT;
+  const leftPress = key === KEYS.ARROW_LEFT;
   const listRef = useRef(null)
-
   const items = menus
-  useEffect(() => {
-    const observer = new MutationObserver(function (event) {
-      event.forEach(mutation => {
-        const {target:selectedElement = {}} = mutation
-        selectedElement && 
-        selectedElement?.classList?.contains(styles.activeCursor)
-        && selectedElement?.focus()
-      })
-      
-    });
 
-    listRef.current && observer.observe(listRef.current, {
-      attributes: true,
-      attributeFilter: ['class'],
-      subtree: true,
-      characterData: false
-    })
-
-    return () => {
-      observer.disconnect()
-    }
-
-  }, [listRef.current])
+  useMutationObservation({
+    observerHandler: mutationObserver,
+    observingElement: listRef.current
+  })
 
   useEffect(() => {
     const eventData = {
@@ -65,25 +56,25 @@ export default function LeftMenus({
         prevState < items.length - 1 ? prevState + 1 : prevState
       );
     }
-  }, [downPress]);
+  }, [downPress, lastUpdateTime]);
 
   useEffect(() => {
     if (isLeftMenuActive && items.length && upPress) {
       setCursor(prevState => (prevState > 0 ? prevState - 1 : prevState));
     }
-  }, [upPress]);
+  }, [upPress, lastUpdateTime]);
 
   useEffect(() => {
     if (items.length && rightPress) {
       setIsLeftMenuActive(false)
     }
-  }, [rightPress]);
+  }, [rightPress, lastUpdateTime]);
 
   useEffect(() => {
     if (items.length && leftPress) {
       setIsLeftMenuActive(true)
     }
-  }, [leftPress]);
+  }, [leftPress, lastUpdateTime]);
 
   // useEffect(() => {
   //   if (items.length && enterPress) {
@@ -120,10 +111,17 @@ export default function LeftMenus({
             </li>
           })}
   </ul>
-       
-
-        
-
           
 }
 
+
+const mutationObserver = function (event) {
+    event.forEach(mutation => {
+      const {
+        target: selectedElement = {}
+      } = mutation
+      selectedElement &&
+        selectedElement?.classList?.contains(styles.activeCursor) &&
+        selectedElement?.focus()
+    })
+}
