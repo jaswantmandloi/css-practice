@@ -20,8 +20,32 @@ export default function LeftMenus({
   const upPress = useKeyPress("ArrowUp");
   const rightPress = useKeyPress("ArrowRight");
   const leftPress = useKeyPress("ArrowLeft");
+  const listRef = useRef(null)
 
   const items = menus
+  useEffect(() => {
+    const observer = new MutationObserver(function (event) {
+      event.forEach(mutation => {
+        const {target:selectedElement = {}} = mutation
+        selectedElement && 
+        selectedElement?.classList?.contains(styles.activeCursor)
+        && selectedElement?.focus()
+      })
+      
+    });
+
+    listRef.current && observer.observe(listRef.current, {
+      attributes: true,
+      attributeFilter: ['class'],
+      subtree: true,
+      characterData: false
+    })
+
+    return () => {
+      observer.disconnect()
+    }
+
+  }, [listRef.current])
 
   useEffect(() => {
     const eventData = {
@@ -73,18 +97,26 @@ export default function LeftMenus({
   //   }
   // }, [hovered]);
   
-
-  return <ul className={styles.leftMenu}>
+  
+  return <ul className={styles.leftMenu} ref={listRef} >
           {menus.map(({id, label}, index) => {
+
+            const elementSelectionProps = {
+              onMouseEnter:onToggleMenu,
+              onFocus:onToggleMenu,
+              ["data-index"]:id,
+              className:id === activeMenuId ? styles.activeCursor : ''
+            }
+
             return <li 
               key={id} 
-              data-index={id}
               className={styles.leftMenuItem}
-              onMouseEnter={onToggleMenu}
-              onFocus={onToggleMenu}
-              className={id === activeMenuId ? styles.activeCursor : ''}
+              
               >
-                <a href="?movie">{label}</a>
+                <a 
+                href="?movie"
+                {...elementSelectionProps}
+                >{label}</a>
             </li>
           })}
   </ul>

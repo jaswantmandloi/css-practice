@@ -162,3 +162,9 @@
 {"v":0,"level":40,"name":"newrelic","hostname":"jaswant","pid":10165,"time":"2020-12-02T10:06:46.331Z","msg":"Merging 1 of 1 events into TransactionEventAggregator for next harvest","component":"event_aggregator"}
 {"v":0,"level":40,"name":"newrelic","hostname":"jaswant","pid":10165,"time":"2020-12-02T10:07:31.387Z","msg":"Merging 1 of 1 events into TransactionEventAggregator for next harvest","component":"event_aggregator"}
 {"v":0,"level":40,"name":"newrelic","hostname":"jaswant","pid":10165,"time":"2020-12-02T10:16:05.435Z","msg":"Merging 2 of 2 events into TransactionEventAggregator for next harvest","component":"event_aggregator"}
+{"v":0,"level":40,"name":"newrelic","hostname":"jaswant","pid":10165,"time":"2020-12-02T11:45:21.833Z","msg":"Merging 1 of 1 events into TransactionEventAggregator for next harvest","component":"event_aggregator"}
+{"v":0,"level":40,"name":"newrelic","hostname":"jaswant","pid":10165,"time":"2020-12-02T11:45:37.436Z","msg":"Merging 1 of 1 events into TransactionEventAggregator for next harvest","component":"event_aggregator"}
+{"v":0,"level":40,"name":"newrelic","hostname":"jaswant","pid":10165,"time":"2020-12-02T11:45:57.555Z","msg":"Merging 1 of 1 events into TransactionEventAggregator for next harvest","component":"event_aggregator"}
+{"v":0,"level":40,"name":"newrelic","hostname":"jaswant","pid":10165,"time":"2020-12-02T11:46:17.832Z","msg":"Merging 1 of 1 events into TransactionEventAggregator for next harvest","component":"event_aggregator"}
+{"v":0,"level":40,"name":"newrelic","hostname":"jaswant","pid":10165,"time":"2020-12-02T12:01:05.083Z","msg":"Merging 1 of 1 events into TransactionEventAggregator for next harvest","component":"event_aggregator"}
+{"v":0,"level":40,"name":"newrelic","hostname":"jaswant","pid":10165,"time":"2020-12-02T12:02:00.379Z","msg":"Merging 1 of 1 events into TransactionEventAggregator for next harvest","component":"event_aggregator"}

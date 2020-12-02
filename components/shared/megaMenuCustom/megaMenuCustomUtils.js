@@ -22,6 +22,7 @@ export const useKeyPress = function (targetKey) {
 
     function downHandler(event) {
         const {key} = event
+        console.log('key', key)
         if (key === targetKey) {
             event.preventDefault()
             setKeyPressed(true);

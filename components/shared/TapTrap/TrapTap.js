@@ -2,8 +2,7 @@ import {useRef, useEffect} from 'react'
 
 const TrapTap = ({
         children, 
-        isActive = true,
-        trapperName
+        isActive = true
     }) => {
 
     const nodeToRestore = useRef();
@@ -20,9 +19,6 @@ const TrapTap = ({
             if (!isActive || event.keyCode !== 9) {
                 return;
             }
-
-            console.log('trapperName', trapperName)
-
 
             if (sentinelEnd.current === document.activeElement) {
                 sentinelStart.current.focus();
