@@ -1,19 +1,15 @@
 import styles from './RightMenus.module.scss'
-import {useKeyPress} from '../megaMenuCustomUtils'
+import {useKeyboardNavigation, KEYS} from '../megaMenuCustomUtils'
 
-import {useState, useEffect, useRef} from 'react'
+import {useEffect, useRef} from 'react'
 
 export default function RightMenus({
     menus,
     isLeftMenuActive
 }) {
 
-    const [selectedItem, setSelectedItem] = useState(null);
-    const downPress = useKeyPress("ArrowDown");
-    const upPress = useKeyPress("ArrowUp");
     const items = useRef([]).current
-    const cursor = useRef(0)
-
+    const listRef = useRef(null)
     useEffect(() => {
         // Create linear list
         menus.forEach(({id, innerMenus}) => {
@@ -22,38 +18,42 @@ export default function RightMenus({
         })
     }, [])
 
-    useEffect(() => {
-        if (!isLeftMenuActive && items.length && upPress) {
-            cursor.current = (cursor.current > 0 ? cursor.current - 1 : cursor.current)
-            const selectedId = items[cursor.current].id
-            setSelectedItem(selectedId)
-        }
-    }, [upPress]);
+    const {
+        selectedItemId
+    } = useKeyboardNavigation({
+        items,
+        isActive: !isLeftMenuActive,
+        selectedClassName: styles.activeCursor,
+        observingElement: listRef.current,
+        keysToListen: [
+            KEYS.ARROW_DOWN,
+            KEYS.ARROW_UP,
+            KEYS.TAB
+        ]
+    })
 
-    useEffect(() => {
-        if (!isLeftMenuActive && items.length && downPress) {
-            cursor.current = cursor.current < items.length - 1 ? cursor.current + 1 : cursor.current
-            const selectedId = items[cursor.current].id
-            setSelectedItem(selectedId)
-        }
-    }, [downPress]);
+    
 
-    return <section>
+    return <section ref={listRef}>
              <div className = {styles.rightNav} >
                 {menus.map(({id, label, innerMenus}) => {
-                    
+                    const selectedItemClassName = selectedItemId === id ? styles.activeCursor : ''
                     return <div key={id}> 
-                        <label
-                        className={selectedItem === id ? styles.activeCursor : ''}
-                        >
-                            <a  href="?innerMenus&genre=0">{label}</a>
+                        <label>
+                            <a  
+                            href="?innerMenus&genre=0"
+                            className={selectedItemClassName}
+                            >{label}</a>
                         </label>
                         <ul key={id}>
                             {innerMenus.map(({id, label}) => {
-                                
-                                return <li key={id} 
-                                className={selectedItem === id ? styles.activeCursor : ''}>
-                                    <a  href="?innerMenus&genre=0">{label}</a>
+                                const selectedItemClassName = selectedItemId === id ? styles.activeCursor : ''
+
+                                return <li key={id}>
+                                    <a  
+                                    href="?innerMenus&genre=0"
+                                    className={selectedItemClassName}
+                                    >{label}</a>
                                 </li>
                             })}
                         </ul>
