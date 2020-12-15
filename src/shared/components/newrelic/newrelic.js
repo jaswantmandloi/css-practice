@@ -1,4 +1,4 @@
-/* eslint-disable no-use-before-define */
+/* eslint-disable */
 import Head from "next/head";
 
 const NewRelicSnippet = () => {
