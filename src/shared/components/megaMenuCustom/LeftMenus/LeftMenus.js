@@ -1,6 +1,6 @@
 import styles from "./LeftMenus.module.scss";
 import { KEYS, useKeyboardNavigation } from "../megaMenuCustomUtils";
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 
 export default function LeftMenus({
   menus,
@@ -11,6 +11,13 @@ export default function LeftMenus({
 }) {
   const listRef = useRef(null);
   const items = menus;
+
+  const horizontalArrowHandler = useCallback(
+    (isActiveLeftMenu) => {
+      setIsLeftMenuActive(isActiveLeftMenu);
+    },
+    [setIsLeftMenuActive]
+  );
 
   const { selectedItemId } = useKeyboardNavigation({
     items,
@@ -24,9 +31,7 @@ export default function LeftMenus({
       KEYS.ARROW_RIGHT,
       KEYS.TAB,
     ],
-    horizontalArrowHandler: (isActiveLeftMenu) => {
-      setIsLeftMenuActive(isActiveLeftMenu);
-    },
+    horizontalArrowHandler,
   });
 
   useEffect(() => {

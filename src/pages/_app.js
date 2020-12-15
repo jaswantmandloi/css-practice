@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import NewRelic from "../components/shared/newrelic/newrelic";
+import NewRelic from "shared/components/newrelic/newrelic";
 
 function MyApp({ Component, pageProps }) {
   return (

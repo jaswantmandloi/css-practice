@@ -55,7 +55,7 @@ export const useMutationObservation = function ({
     return () => {
       observer && observer?.disconnect();
     };
-  }, [observingElement]);
+  }, [observerHandler, observingElement]);
 };
 
 export const useKeyboardNavigation = function ({
@@ -102,7 +102,7 @@ export const useKeyboardNavigation = function ({
       const { id: selectedId } = items[cursorPosition.current];
       setSelectedItemId(selectedId);
     }
-  }, [upPress, lastUpdateTime]);
+  }, [upPress, lastUpdateTime, isActive, items]);
 
   useEffect(() => {
     if (isActive && items.length && downPress) {
@@ -113,19 +113,19 @@ export const useKeyboardNavigation = function ({
       const { id: selectedId } = items[cursorPosition.current];
       setSelectedItemId(selectedId);
     }
-  }, [downPress, lastUpdateTime]);
+  }, [downPress, isActive, items, lastUpdateTime]);
 
   useEffect(() => {
     if (items.length && rightPress) {
       horizontalArrowHandler(false);
     }
-  }, [rightPress, lastUpdateTime]);
+  }, [rightPress, lastUpdateTime, items.length, horizontalArrowHandler]);
 
   useEffect(() => {
     if (items.length && leftPress) {
       horizontalArrowHandler(true);
     }
-  }, [leftPress, lastUpdateTime]);
+  }, [leftPress, lastUpdateTime, items.length, horizontalArrowHandler]);
 
   return { selectedItemId };
 };

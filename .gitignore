@@ -36,3 +36,4 @@ yarn-error.log*
 newrelic_agent.log
 
 .eslintcache
+newrelic_agent.log

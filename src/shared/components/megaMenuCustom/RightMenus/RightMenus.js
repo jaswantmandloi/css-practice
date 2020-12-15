@@ -12,7 +12,7 @@ export default function RightMenus({ menus, isLeftMenuActive }) {
       items.push({ id });
       items.push(...innerMenus);
     });
-  }, []);
+  }, [items, menus]);
 
   const { selectedItemId } = useKeyboardNavigation({
     items,

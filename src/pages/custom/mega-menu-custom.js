@@ -1,5 +1,5 @@
 import Head from "next/head";
-import MegaMenuCmp from "../components/shared/megaMenuCustom/megaMenuCustom";
+import MegaMenuCmp from "shared/components/megaMenuCustom/megaMenuCustom";
 
 export default function MegaMenu() {
   return (

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/home.module.css";
-import Header from "../components/shared/header/header";
+import Header from "shared/components/header/header";
 
 export default function Home() {
   //console.log("process", process.env.DB_HOST);
