@@ -3,14 +3,14 @@ import { useRef, useEffect } from "react";
 
 //https://stackoverflow.com/questions/42036865/react-how-to-navigate-through-list-by-arrow-keys
 
-const subMenuOpenClass = styles["sub-nav-open"];
-const hasClass = (element, clsName) => {
-  return !!element.classList.contains(clsName);
-};
+// const subMenuOpenClass = styles["sub-nav-open"];
+// const hasClass = (element, clsName) => {
+//   return !!element.classList.contains(clsName);
+// };
 
-const toggleClass = (element, clsName, toggleState) => {
-  return !!element.classList.toggle(clsName, toggleState);
-};
+// const toggleClass = (element, clsName, toggleState) => {
+//   return !!element.classList.toggle(clsName, toggleState);
+// };
 
 export default function MegaMenu() {
   const navMenuRef = useRef(null);
@@ -135,41 +135,41 @@ const Menus = [
   },
 ];
 
-const ListItem = ({ item, active, setSelected, setHovered }) => (
-  <div
-    className={`item ${active ? "active" : ""}`}
-    onClick={() => setSelected(item)}
-    onMouseEnter={() => setHovered(item)}
-    onMouseLeave={() => setHovered(undefined)}
-  >
-    {item.name}
-  </div>
-);
+// const ListItem = ({ item, active, setSelected, setHovered }) => (
+//   <div
+//     className={`item ${active ? "active" : ""}`}
+//     onClick={() => setSelected(item)}
+//     onMouseEnter={() => setHovered(item)}
+//     onMouseLeave={() => setHovered(undefined)}
+//   >
+//     {item.name}
+//   </div>
+// );
 
-const useKeyPress = function (targetKey) {
-  const [keyPressed, setKeyPressed] = useState(false);
+// const useKeyPress = function (targetKey) {
+//   const [keyPressed, setKeyPressed] = useState(false);
 
-  function downHandler({ key }) {
-    if (key === targetKey) {
-      setKeyPressed(true);
-    }
-  }
+//   function downHandler({ key }) {
+//     if (key === targetKey) {
+//       setKeyPressed(true);
+//     }
+//   }
 
-  const upHandler = ({ key }) => {
-    if (key === targetKey) {
-      setKeyPressed(false);
-    }
-  };
+//   const upHandler = ({ key }) => {
+//     if (key === targetKey) {
+//       setKeyPressed(false);
+//     }
+//   };
 
-  useEffect(() => {
-    window.addEventListener("keydown", downHandler);
-    window.addEventListener("keyup", upHandler);
+//   useEffect(() => {
+//     window.addEventListener("keydown", downHandler);
+//     window.addEventListener("keyup", upHandler);
 
-    return () => {
-      window.removeEventListener("keydown", downHandler);
-      window.removeEventListener("keyup", upHandler);
-    };
-  });
+//     return () => {
+//       window.removeEventListener("keydown", downHandler);
+//       window.removeEventListener("keyup", upHandler);
+//     };
+//   });
 
-  return keyPressed;
-};
+//   return keyPressed;
+// };

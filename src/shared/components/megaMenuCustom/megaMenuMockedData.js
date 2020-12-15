@@ -38,22 +38,22 @@ Array.from(Array(15).keys()).forEach((topMenu) => {
 
 export { topMenus };
 
-const leftMenus = [
-  {
-    leftMenu: "Movies",
-    rightMenus: [
-      ["Action Adventure", "Children Family"],
-      ["Dramas", "Foreign"],
-      ["Musicals", "Romance"],
-    ],
-  },
+// const leftMenus = [
+//   {
+//     leftMenu: "Movies",
+//     rightMenus: [
+//       ["Action Adventure", "Children Family"],
+//       ["Dramas", "Foreign"],
+//       ["Musicals", "Romance"],
+//     ],
+//   },
 
-  {
-    leftMenu: "TV Shows",
-    rightMenus: [
-      ["Classic TV", "Crime TV"],
-      ["Reality TV", "Foreign"],
-      ["Musicals", "Romance"],
-    ],
-  },
-];
+//   {
+//     leftMenu: "TV Shows",
+//     rightMenus: [
+//       ["Classic TV", "Crime TV"],
+//       ["Reality TV", "Foreign"],
+//       ["Musicals", "Romance"],
+//     ],
+//   },
+// ];

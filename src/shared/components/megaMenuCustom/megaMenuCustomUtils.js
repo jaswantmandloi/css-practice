@@ -15,7 +15,6 @@ export const useKeyPressEvent = function (captureEvents) {
 
   function downHandler(event) {
     const { key, shiftKey } = event;
-    console.log("key", event);
     if (captureEvents.includes(key)) {
       event.preventDefault();
       setKeyEvent({

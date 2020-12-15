@@ -1,6 +1,5 @@
-/* eslint-disable consistent-return, jsx-a11y/no-noninteractive-tabindex, camelcase */
-import * as React from "react";
-import * as ReactDOM from "react-dom";
+import React from "react";
+import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
 import ownerDocument from "../utils/ownerDocument";
 import useForkRef from "../utils/useForkRef";
