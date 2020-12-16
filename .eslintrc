@@ -7,7 +7,7 @@
     },
     "extends": [
         "eslint:recommended",
-        // "plugin:react/recommended",
+         "plugin:react/recommended",
         // "plugin:import/errors",
         // "plugin:import/warnings"
     ],
@@ -22,7 +22,9 @@
     "plugins": [
         "react",
         "prettier",
-        "react-hooks"
+        "react-hooks",
+        "no-unsanitized",
+        "eslint-plugin-react"
     ],
     "rules": {
         "no-unneeded-ternary": "error",
@@ -40,7 +42,13 @@
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
         "eqeqeq": "error",
-        "curly": "warn"
+        "curly": "warn",
+        
+        "react/prop-types": 0,
+
+        // https://github.com/mozilla/eslint-plugin-no-unsanitized
+        "no-unsanitized/method": "error",
+        "no-unsanitized/property": "error"
     },
     "settings": {
         "react": {

@@ -27,6 +27,7 @@ function Unstable_TrapFocus(props) {
   // can be removed once we drop support for non ref forwarding class components
   const handleOwnRef = React.useCallback((instance) => {
     // #StrictMode ready
+    // eslint-disable-next-line react/no-find-dom-node
     rootRef.current = ReactDOM.findDOMNode(instance);
   }, []);
   const handleRef = useForkRef(children.ref, handleOwnRef);
