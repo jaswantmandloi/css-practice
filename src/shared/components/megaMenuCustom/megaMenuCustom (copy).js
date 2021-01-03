@@ -93,7 +93,7 @@ export default function MegaMenu() {
       <section>
         {Menus.map((menu, index) => {
           return (
-            <div className={styles["sub-nav"]} data-index={index}>
+            <div key={index} className={styles["sub-nav"]} data-index={index}>
               {menu.subMenus.map((subMenus, index) => {
                 return (
                   <ul key={index} className={styles["sub-nav-group"]}>
