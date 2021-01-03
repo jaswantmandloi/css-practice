@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@material-ui/core": "latest",
+    "@material-ui/icons": "^4.11.2",
     "express": "^4.17.1",
     "newrelic": "^7.0.1",
     "next": "10.0.0",
