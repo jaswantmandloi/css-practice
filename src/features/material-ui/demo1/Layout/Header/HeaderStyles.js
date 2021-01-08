@@ -6,7 +6,7 @@ export const useStylesContainer = makeStyles((theme) => ({
     margin: 0,
   },
   paper: {
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: theme.palette.background.main,
     color: theme.palette.text.light,
   },
 }));

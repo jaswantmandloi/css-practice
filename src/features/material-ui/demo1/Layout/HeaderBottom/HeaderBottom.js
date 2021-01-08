@@ -2,61 +2,54 @@
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
-import Divider from "@material-ui/core/Divider";
-import { useStylesBackMoney } from "./HeaderTopStyles";
+import { useStylesContainer } from "./HeaderBottomStyles";
 import { getBreakPointsWidths } from "features/material-ui/demo1/Utils";
+import ExpandMore from "@material-ui/icons/ExpandMore";
+import Sms from "@material-ui/icons/Sms";
+import Room from "@material-ui/icons/Room";
 
 export default function HeaderTop() {
-  //const containerClasses = useStylesContainer();
-  const backMoneyClasses = useStylesBackMoney();
+  const classes = useStylesContainer();
 
   return (
-    // <Container className={containerClasses.root}>
-    <Grid container alignItems="center" justify="center">
-      <Grid item {...getBreakPointsWidths(6)} className={backMoneyClasses.root}>
-        <Link href="#" variant="body2" className={backMoneyClasses.normalLink}>
-          <Typography component="span">Now! Up to</Typography>
-          <Typography component="span" className={backMoneyClasses.backAmount}>
-            {" "}
-            5% back{" "}
-          </Typography>
-          <Typography component="span">
-            both online & in store for Rewards members.{" "}
-          </Typography>
-          <Typography component="span">
-            <Link href="#" variant="body2">
-              Learn more
-            </Link>
+    // <Container className={classes.root}>
+    <Grid
+      container
+      alignItems="center"
+      justify="center"
+      className={classes.root}
+    >
+      <Grid item {...getBreakPointsWidths(6)} className={classes.freeDelivery}>
+        <Link href="#" variant="body2">
+          <Typography component="span" variant="body2">
+            Free delivery, no minimum
           </Typography>
         </Link>
       </Grid>
 
-      <Divider
-        orientation="vertical"
-        flexItem
-        className={backMoneyClasses.divider}
-      />
-
-      <Grid
-        item
-        {...getBreakPointsWidths(5)}
-        className={backMoneyClasses.root}
-        justify="center"
-      >
-        <Link href="#" variant="body2" className={backMoneyClasses.normalLink}>
-          <Typography component="span">Up to</Typography>
-          <Typography component="span" className={backMoneyClasses.backAmount}>
-            {" "}
-            40% off{" "}
-          </Typography>
-          <Typography component="span">
-            bselect chairs and furniture.{" "}
-          </Typography>
-          <Typography component="span">
-            <Link href="#" variant="body2">
-              Shop now
-            </Link>
-          </Typography>
+      <Grid item {...getBreakPointsWidths(6)} className={classes.menus}>
+        <Link href="#" variant="body2">
+          Rewards
+          <ExpandMore />
+        </Link>
+        <Link href="#" variant="body2">
+          WorkLife
+          <ExpandMore />
+        </Link>
+        <Link href="#" variant="body2">
+          Lists
+          <ExpandMore />
+        </Link>
+        <Link href="#" variant="body2">
+          For Businesses
+        </Link>
+        <Link href="#" variant="body2">
+          <Sms />
+          Chat
+        </Link>
+        <Link href="#" variant="body2">
+          <Room />
+          Set Your Store
         </Link>
       </Grid>
     </Grid>
