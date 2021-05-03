@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 2px solid red;
+  flex-grow: 1;
+}
+
+.listItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rebeccapurple;
+  margin: 2px;
+  flex-basis: 250px;
+  min-height: 250px;
+}
