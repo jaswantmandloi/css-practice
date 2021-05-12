@@ -1,5 +1,7 @@
 .container {
   min-height: 100vh;
+  font-family: "Motiva Sans";
+  font-size: 11px;
 }
 
 .languageSelector {
@@ -31,6 +33,48 @@
   justify-content: space-between;
   align-items: center;
   color: #666666;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.header .logo {
+  margin: 11px 10px 10px;
+}
+
+.header .searchBar input {
+  padding: 9px 50px 9px 12px;
+  border: none;
+  min-width: 350px;
+}
+
+.header .searchBar button.search {
+  border-radius: 0 3px 3px 0;
+  background-color: #444444;
+  border: none;
+}
+
+.header .searchBar {
+  display: flex;
+  justify-content: stretch;
+  border: #444444 1px solid;
+}
+
+.headerMiddle {
+  display: flex;
+  align-items: center;
+}
+
+.inkToner {
+  margin-left: 20px;
+}
+.inkToner button {
+  padding: 10px 25px;
+  display: flex;
+  background-color: transparent;
+  border-color: #666666;
 }
 
 @media only screen and (min-width: 600px) {
