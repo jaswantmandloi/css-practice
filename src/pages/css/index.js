@@ -42,6 +42,20 @@ export default function Index() {
               </button>
             </div>
           </div>
+          <div className={styles.buttons}>
+            <button>
+              <img src="/css/index/account.png" />
+              <span>Sign In</span>
+            </button>
+            <button>
+              <img src="/css/index/connect@1x.png" />
+              <span>Help</span>
+            </button>
+            <button>
+              <img src="/css/index/cart .png" />
+              <span>Cart</span>
+            </button>
+          </div>
         </div>
       </div>
     </>
