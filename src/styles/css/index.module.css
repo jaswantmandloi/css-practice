@@ -33,8 +33,73 @@
   border-bottom: 1px #e7e7e7 solid;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: stretch;
+  color: #666666;
+}
+
+.topHeaderFirstPart {
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  margin-right: auto;
+}
+
+.logout {
+  border-right: #e7e7e7 1px solid;
+  padding: 5px 5px 5px 5px;
+}
+.logout button {
+  border: none;
+  background-color: transparent;
+  color: #666666;
+  font-weight: 500;
+}
+
+.topHeaderSecondPart {
+  display: flex;
+  align-items: center;
+}
+
+.topHeaderSecondPart .messages {
+  border-left: #e7e7e7 1px solid;
+  padding: 5px 5px 5px 5px;
+}
+
+.topHeaderSecondPart .messages button {
+  border: none;
+  background-color: transparent;
+  color: #cc0000;
+}
+
+.topHeaderLastPart {
+  display: flex;
+}
+
+.shipToLocation {
+  border-left: #e7e7e7 1px solid;
+  padding: 5px 5px 5px 5px;
+  font-weight: 500;
+  font-size: 13px;
+  color: #666666;
+}
+
+.shipToLocation span:first-child {
+  padding-right: 10px;
+}
+
+.shipToLocation span:last-child {
+  padding-left: 10px;
+}
+
+.findAccount {
+  border-left: #e7e7e7 1px solid;
+  padding: 5px 5px 5px 5px;
+}
+
+.findAccount button {
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
   color: #666666;
 }
 
@@ -134,17 +199,38 @@
   content: "";
 }
 
-@media only screen and (min-width: 600px) {
-}
-
-@media only screen and (max-width: 768px) {
-  .listItem {
-    flex-basis: 100%;
-    min-height: 250px;
+@media only screen and (max-width: 600px) {
+  .header .searchBar input {
+    min-width: 60%;
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (max-width: 768px) {
+  .topHeader {
+    flex-wrap: wrap;
+  }
+  .topHeaderLastPart {
+    border-top: 1px #e7e7e7 solid;
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+  .shipToLocation {
+    border: none;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .header .headerMiddle {
+    order: 3;
+    border-top: 1px #e7e7e7 solid;
+    flex: 1 1 100%;
+    justify-content: center;
+    padding: 10px 1px;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
