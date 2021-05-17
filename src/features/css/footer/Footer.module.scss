@@ -65,6 +65,13 @@
   @media screen and (max-width: 600px) {
     flex-direction: column;
     align-items: flex-start;
+    padding: 10px;
+
+    .essentials {
+      img:first-child {
+        margin-right: initial;
+      }
+    }
   }
 }
 
@@ -80,15 +87,26 @@
   font-size: 13px;
   padding-top: 35px;
 
+  .copyrightText {
+    text-align: center;
+  }
+
   .pageLinks {
     ul {
       display: flex;
+      justify-content: center;
       li::after {
         content: "|";
         margin: 0px 6px;
       }
       li:last-child:after {
         content: "";
+      }
+
+      @media screen and (max-width: 600px) {
+        li::after {          
+          margin: 0px 3px;
+        }
       }
     }
   }

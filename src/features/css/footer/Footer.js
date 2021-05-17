@@ -42,7 +42,7 @@ export default function Index() {
       </div>
 
       <div className={styles.footerLastPart}>
-        <div>
+        <div className={styles.copyrightText}>
           Copyright © 2001-2019 Corporate Express Canada, Inc., a Staples
           company. All rights reserved.
         </div>

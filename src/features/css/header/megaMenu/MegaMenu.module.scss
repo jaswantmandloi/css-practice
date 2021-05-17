@@ -1,0 +1,25 @@
+
+.megaMenu {
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+}
+
+.megaMenu button {
+  font-size: 14px;
+  font-weight: 500;
+  color: #444444;
+  font-family: "Motiva Sans";
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  margin: 5px 10px;
+  text-transform: uppercase;
+}
+
+.megaMenu button::after {
+  content: "";
+}
