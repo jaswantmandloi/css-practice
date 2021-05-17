@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styles from "styles/css/index.module.css";
+import Footer from "features/css/footer";
 
 export default function Index() {
   return (
@@ -85,6 +86,8 @@ export default function Index() {
           <button>Flyers & Publications </button>
           <button>Become a customer </button>
         </div>
+
+        <Footer />
       </div>
     </>
   );
