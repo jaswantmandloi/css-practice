@@ -5,6 +5,7 @@ import HeaderTop from "features/css/header/headerTop";
 import MegaMenu from "features/css/header/megaMenu";
 import HeaderMiddle from "features/css/header/headerMiddle";
 import Slider from "features/css/slider";
+import UserInfo from "features/css/userInfo";
 
 export default function Index() {
   return (
@@ -18,6 +19,7 @@ export default function Index() {
         <HeaderMiddle />
         <MegaMenu />
         <Slider />
+        <UserInfo />
         <Footer />
       </div>
     </>

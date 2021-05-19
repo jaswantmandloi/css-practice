@@ -1,0 +1,53 @@
+.userInfo {
+  padding: 60px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #444444;
+}
+
+.username {
+  color: #cc0203;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.date, .amount {
+  div:first-child {
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+
+.amount {
+  div:last-child span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+
+    background-color: #444444;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;    
+    color: #FFFFFF  ;
+    font-size: 15px;
+  }
+
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+}
+
+.userDescription {
+  line-height: 20px;
+   a {
+    color: #CB2026;
+   }
+   max-width: 300px;
+
+   @media screen and (max-width: 800px) {
+     display: none;
+   }
+}
