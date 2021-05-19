@@ -6,6 +6,7 @@ import MegaMenu from "features/css/header/megaMenu";
 import HeaderMiddle from "features/css/header/headerMiddle";
 import Slider from "features/css/slider";
 import UserInfo from "features/css/userInfo";
+import UserFinance from "features/css/userFinance";
 
 export default function Index() {
   return (
@@ -20,6 +21,7 @@ export default function Index() {
         <MegaMenu />
         <Slider />
         <UserInfo />
+        <UserFinance />
         <Footer />
       </div>
     </>

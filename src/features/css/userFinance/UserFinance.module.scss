@@ -1,0 +1,16 @@
+.tableWrapper {
+  overflow-x: auto;
+  .table {
+    min-width: 800px;
+  }
+}
+
+.collapser {
+  display: flex;
+  position: relative;
+  div:first-child {
+    position: absolute;
+    top:0px;
+    left: -15px;
+  }
+}
