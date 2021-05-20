@@ -7,8 +7,10 @@ import HeaderMiddle from "features/css/header/headerMiddle";
 import Slider from "features/css/slider";
 import UserInfo from "features/css/userInfo";
 import UserFinance from "features/css/userFinance";
+import ShoppingDetails from "features/css/shoppingDetails";
 
-export default function Index() {
+export default function Index(props) {
+  console.log("props", props);
   return (
     <>
       <Head>
@@ -22,8 +24,14 @@ export default function Index() {
         <Slider />
         <UserInfo />
         <UserFinance />
+        <ShoppingDetails />
         <Footer />
       </div>
     </>
   );
 }
+
+Index.getInitialProps = async (ctx) => {
+  console.log("ctx", ctx.query);
+  return { query: ctx.query };
+};

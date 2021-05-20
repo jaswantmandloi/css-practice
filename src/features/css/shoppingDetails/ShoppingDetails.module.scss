@@ -1,0 +1,68 @@
+.shoppingDetails {
+  background-color: #f3f3f3;
+  display: flex;
+
+  div.approver {
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+  }
+}
+
+.card {
+  background-color: #ffffff;
+  margin: 13px 15px;
+  padding-top: 24px;
+  padding-left: 24px;
+  padding-right: 40px;
+  flex: 1;
+}
+
+.approvalOrder {
+  h2 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #444444;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+
+  p {
+    padding-left: 12px;
+  }
+}
+
+.listItems {
+  display: flex;
+  justify-content: space-between;
+  color: #444444;
+  li {
+    div {
+      display: flex;
+      flex-direction: column;
+      padding: 5px 10px 10px 10px;
+      white-space: nowrap;
+      @media screen and (max-width: 1280px) {
+        padding: 5px 2px 2px 2px;
+      }
+    }
+  }
+}
+
+.orders {
+  div {
+    display: flex;
+    justify-content: space-between;
+    a {
+      color: #cc0000;
+    }
+  }
+}
