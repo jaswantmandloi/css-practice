@@ -9,8 +9,7 @@ import UserInfo from "features/css/userInfo";
 import UserFinance from "features/css/userFinance";
 import ShoppingDetails from "features/css/shoppingDetails";
 
-export default function Index(props) {
-  console.log("props", props);
+export default function Index() {
   return (
     <>
       <Head>
@@ -32,6 +31,5 @@ export default function Index(props) {
 }
 
 Index.getInitialProps = async (ctx) => {
-  console.log("ctx", ctx.query);
   return { query: ctx.query };
 };
