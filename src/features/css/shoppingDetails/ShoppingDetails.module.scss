@@ -1,16 +1,6 @@
 .shoppingDetails {
   background-color: #f3f3f3;
-  display: flex;
-
-  div.approver {
-    @media screen and (max-width: 1024px) {
-      display: none;
-    }
-  }
-
-  @media screen and (max-width: 800px) {
-    flex-direction: column;
-  }
+  padding-bottom: 30px;
 }
 
 .card {
@@ -19,8 +9,16 @@
   padding-top: 24px;
   padding-left: 24px;
   padding-right: 40px;
+  padding-bottom: 24px;
   flex: 1;
+  width: 100%;
+  height: 100%;
 }
+
+.carouselItem {
+  background-color: #f3f3f3;
+}
+
 
 .approvalOrder {
   h2 {

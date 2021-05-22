@@ -8,6 +8,7 @@ import Slider from "features/css/slider";
 import UserInfo from "features/css/userInfo";
 import UserFinance from "features/css/userFinance";
 import ShoppingDetails from "features/css/shoppingDetails";
+import "react-multi-carousel/lib/styles.css";
 
 export default function Index() {
   return (
