@@ -1,0 +1,17 @@
+.membership {
+  padding: 100px 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #444444;
+  }
+
+  p {
+    max-width: 700px;
+  }
+}
