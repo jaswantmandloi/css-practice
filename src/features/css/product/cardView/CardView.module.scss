@@ -27,19 +27,38 @@
 }
 
 .body {
-    padding: 20px 12px;
+  padding: 20px 12px;
 }
 
 .rating {
-    display: flex;
-    padding-top: 15px;
-    div:last-child {
-        padding-left: 6px;
-    }
+  display: flex;
+  padding-top: 15px;
+  div:last-child {
+    padding-left: 6px;
+  }
 }
 
-.subTitle, .productCode, .memberPrice {
-    padding-top: 15px;
+.subTitle,
+.productCode,
+.memberPrice,
+.icons {
+  padding-top: 15px;
+  color: #666666;
+  font-weight: normal;
+}
+
+.footer {
+  display: flex;
+  border: 1px solid #eaeaea;
+  border-radius: 0 0 3px 3px;
+  padding: 11px 12px 11px 12px;
+  div:first-child {
+    color: #444444;
+    font-size: 20px;
+    padding-right: 5px;
+  }
+  div:last-child {
     color: #666666;
-    font-weight: normal;
+    align-self: flex-end;
+  }
 }

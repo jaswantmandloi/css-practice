@@ -1,8 +1,14 @@
 import styles from "./CardView.module.scss";
 import Rating from "features/css/product/rating";
+import Icons from "features/css/product/icons";
 
 export default function Index({ product }) {
-  const { subTitle = "", productCode = "", memberPrice = "" } = product;
+  const {
+    subTitle = "",
+    productCode = "",
+    memberPrice = "",
+    price = "",
+  } = product;
   return (
     <div className={styles.product}>
       <div className={styles.header}>
@@ -20,6 +26,13 @@ export default function Index({ product }) {
         <div className={styles.subTitle}>{subTitle}</div>
         <div className={styles.productCode}>{productCode}</div>
         <div className={styles.memberPrice}>{memberPrice}</div>
+        <div className={styles.icons}>
+          <Icons />
+        </div>
+      </div>
+      <div className={styles.footer}>
+        <div>{price}</div>
+        <div>each</div>
       </div>
     </div>
   );

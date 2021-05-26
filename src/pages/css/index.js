@@ -67,6 +67,7 @@ const recommendedProducts = [
     subTitle: "Dominion Blueline Inc.",
     productCode: "MOTLS22087AZM01",
     memberPrice: "Member price",
+    price: "$399",
   },
   {
     image: "/css/index/products/2.jpeg",
@@ -75,6 +76,7 @@ const recommendedProducts = [
     subTitle: "Dominion Blueline Inc.",
     productCode: "MOTLS22087AZM01",
     memberPrice: "Member price",
+    price: "$399",
   },
   {
     image: "/css/index/products/3.jpeg",
@@ -83,6 +85,7 @@ const recommendedProducts = [
     subTitle: "Dominion Blueline Inc.",
     productCode: "MOTLS22087AZM01",
     memberPrice: "Member price",
+    price: "$399",
   },
   {
     image: "/css/index/products/4.jpeg",
@@ -91,6 +94,7 @@ const recommendedProducts = [
     subTitle: "Dominion Blueline Inc.",
     productCode: "MOTLS22087AZM01",
     memberPrice: "Member price",
+    price: "$399",
   },
   {
     image: "/css/index/products/5.jpeg",
@@ -99,5 +103,6 @@ const recommendedProducts = [
     subTitle: "Dominion Blueline Inc.",
     productCode: "MOTLS22087AZM01",
     memberPrice: "Member price",
+    price: "$399",
   },
 ];
