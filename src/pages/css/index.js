@@ -11,6 +11,7 @@ import UserFinance from "features/css/userFinance";
 import ShoppingDetails from "features/css/shoppingDetails";
 import MembershipDetails from "features/css/membershipDetails";
 import ItemListing from "features/css/itemListing";
+import ProductSlider from "features/css/productSlider";
 
 export default function Index() {
   return (
@@ -33,6 +34,7 @@ export default function Index() {
           items={membershipCategories}
           heading="Your membership benefits"
         />
+        <ProductSlider products={recommendedProducts} />
         <Footer />
       </div>
     </>
@@ -55,4 +57,47 @@ const membershipCategories = [
   { image: "/css/index/tag.svg", label: "Access to business perks" },
   { image: "/css/index/laptop.svg", label: "500+ key value items" },
   { image: "/css/index/shield.svg", label: "Money back guarantee" },
+];
+
+const recommendedProducts = [
+  {
+    image: "/css/index/products/1.jpeg",
+    title: "Starbucks Pike Place Keurig K-Cup Pods, 40 Count",
+    rating: 3,
+    subTitle: "Dominion Blueline Inc.",
+    productCode: "MOTLS22087AZM01",
+    memberPrice: "Member price",
+  },
+  {
+    image: "/css/index/products/2.jpeg",
+    title: "Starbucks Pike Place Keurig K-Cup Pods, 40 Count",
+    rating: 5,
+    subTitle: "Dominion Blueline Inc.",
+    productCode: "MOTLS22087AZM01",
+    memberPrice: "Member price",
+  },
+  {
+    image: "/css/index/products/3.jpeg",
+    title: "Starbucks Pike Place Keurig K-Cup Pods, 40 Count",
+    rating: 1,
+    subTitle: "Dominion Blueline Inc.",
+    productCode: "MOTLS22087AZM01",
+    memberPrice: "Member price",
+  },
+  {
+    image: "/css/index/products/4.jpeg",
+    title: "Starbucks Pike Place Keurig K-Cup Pods, 40 Count",
+    rating: 0,
+    subTitle: "Dominion Blueline Inc.",
+    productCode: "MOTLS22087AZM01",
+    memberPrice: "Member price",
+  },
+  {
+    image: "/css/index/products/5.jpeg",
+    title: "Starbucks Pike Place Keurig K-Cup Pods, 40 Count",
+    rating: 4,
+    subTitle: "Dominion Blueline Inc.",
+    productCode: "MOTLS22087AZM01",
+    memberPrice: "Member price",
+  },
 ];
