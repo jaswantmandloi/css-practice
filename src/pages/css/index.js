@@ -12,6 +12,7 @@ import ShoppingDetails from "features/css/shoppingDetails";
 import MembershipDetails from "features/css/membershipDetails";
 import ItemListing from "features/css/itemListing";
 import ProductSlider from "features/css/productSlider";
+import Offers from "features/css/offers";
 
 export default function Index() {
   return (
@@ -34,7 +35,15 @@ export default function Index() {
           items={membershipCategories}
           heading="Your membership benefits"
         />
-        <ProductSlider products={recommendedProducts} />
+        <ProductSlider
+          products={recommendedProducts}
+          sliderHeading="Items You Might Like"
+        />
+        <Offers offers={offers} />
+        <ProductSlider
+          products={recommendedProducts}
+          sliderHeading="Recently Viewed Items"
+        />
         <Footer />
       </div>
     </>
@@ -104,5 +113,25 @@ const recommendedProducts = [
     productCode: "MOTLS22087AZM01",
     memberPrice: "Member price",
     price: "$399",
+  },
+];
+
+const offers = [
+  {
+    heading: "25% Off",
+    details: `When you buy 24 of
+    the same select Pental
+    Mechanical Pencils.`,
+    image: "/css/index/products/pen.png",
+  },
+  {
+    heading: "15% Off",
+    details: `When you buy 2 of the same select Computer Cleaning Products. `,
+    image: "/css/index/products/air-fresher.png",
+  },
+  {
+    heading: "10% Off",
+    details: `When you buy select Derwent Art Supplies.`,
+    image: "/css/index/products/pencil-box.png",
   },
 ];

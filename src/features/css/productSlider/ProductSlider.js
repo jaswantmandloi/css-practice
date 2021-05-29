@@ -22,10 +22,10 @@ const responsive = {
   },
 };
 
-export default function Index({ products = [] }) {
+export default function Index({ products = [], sliderHeading = "" }) {
   return (
     <div className={styles.productSlider}>
-      <div className={styles.heading}>Items You Might Like</div>
+      <div className={styles.heading}>{sliderHeading}</div>
       <div className={styles.productsContainer}>
         <Carousel responsive={responsive}>
           {products.map((product, index) => {
