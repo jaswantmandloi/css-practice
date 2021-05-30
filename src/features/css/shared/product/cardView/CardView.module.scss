@@ -5,6 +5,14 @@
   border-radius: 3px;
   background-color: #ffffff;
   margin-right: 12px;
+  position: relative;
+
+  &:hover {
+    .hoverFooter {
+      visibility: visible;
+      bottom: 0;
+    }
+  }
 }
 
 .header {
@@ -48,10 +56,13 @@
 }
 
 .footer {
-  display: flex;
   border: 1px solid #eaeaea;
   border-radius: 0 0 3px 3px;
   padding: 11px 12px 11px 12px;
+}
+
+.price {
+  display: flex;
   div:first-child {
     color: #444444;
     font-size: 20px;
@@ -60,5 +71,47 @@
   div:last-child {
     color: #666666;
     align-self: flex-end;
+  }
+}
+
+.hoverFooter {
+  position: absolute;
+  visibility: hidden;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 10px;
+  bottom: -800px;
+
+  transition: all 0.5s ease;
+  will-change: top;
+  
+
+  .inStock {
+    color: #666;
+    span:first-child {
+      color: #01787a;
+      padding-right: 10px;
+    }
+    padding: 10px 0;
+  }
+
+  .addToCart {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    input {
+      max-width: 20%;
+      margin-right: 5px;
+    }
+    button {
+      color: #fff;
+      border: 1px solid #c00;
+      background: #c00;
+      width: 80%;
+      padding: 10px 0;
+      border-radius: 18px;
+    }
   }
 }

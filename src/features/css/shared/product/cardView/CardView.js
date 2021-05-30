@@ -30,9 +30,26 @@ export default function Index({ product }) {
           <Icons />
         </div>
       </div>
-      <div className={styles.footer}>
+      <div className={`${styles.footer} ${styles.price}`}>
         <div>{price}</div>
         <div>each</div>
+      </div>
+      <div className={styles.hoverFooter}>
+        <div className={styles.icons}>
+          <Icons />
+        </div>
+        <div className={styles.inStock}>
+          <span>In Stock</span>
+          <span>Check estimation delivery</span>
+        </div>
+        <div className={styles.price}>
+          <div>{price}</div>
+          <div>each</div>
+        </div>
+        <div className={styles.addToCart}>
+          <input type="number" name="qty" />
+          <button>Add to cart</button>
+        </div>
       </div>
     </div>
   );
