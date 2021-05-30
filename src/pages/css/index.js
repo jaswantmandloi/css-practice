@@ -1,18 +1,18 @@
 import "react-multi-carousel/lib/styles.css";
 import Head from "next/head";
 import styles from "styles/css/index.module.css";
-import Footer from "features/css/footer";
-import HeaderTop from "features/css/header/headerTop";
-import MegaMenu from "features/css/header/megaMenu";
-import HeaderMiddle from "features/css/header/headerMiddle";
-import Slider from "features/css/slider";
-import UserInfo from "features/css/userInfo";
-import UserFinance from "features/css/userFinance";
-import ShoppingDetails from "features/css/shoppingDetails";
-import MembershipDetails from "features/css/membershipDetails";
-import ItemListing from "features/css/itemListing";
-import ProductSlider from "features/css/productSlider";
-import Offers from "features/css/offers";
+import Footer from "features/css/shared/footer";
+import HeaderTop from "features/css/shared/header/headerTop";
+import MegaMenu from "features/css/shared/header/megaMenu";
+import HeaderMiddle from "features/css/shared/header/headerMiddle";
+import Slider from "features/css/shared/slider";
+import UserInfo from "features/css/index/userInfo";
+import UserFinance from "features/css/index/userFinance";
+import ShoppingDetails from "features/css/index/shoppingDetails";
+import MembershipDetails from "features/css/index/membershipDetails";
+import ItemListing from "features/css/index/itemListing";
+import ProductSlider from "features/css/shared/productSlider";
+import Offers from "features/css/index/offers";
 
 export default function Index() {
   return (

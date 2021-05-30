@@ -1,6 +1,6 @@
 import styles from "./CardView.module.scss";
-import Rating from "features/css/product/rating";
-import Icons from "features/css/product/icons";
+import Rating from "features/css/shared/product/rating";
+import Icons from "features/css/shared/product/icons";
 
 export default function Index({ product }) {
   const {

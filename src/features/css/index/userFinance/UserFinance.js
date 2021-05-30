@@ -1,6 +1,6 @@
 import styles from "./UserFinance.module.scss";
 
-import Table from "../table";
+import Table from "features/css/shared/table";
 
 export default function Index() {
   return (

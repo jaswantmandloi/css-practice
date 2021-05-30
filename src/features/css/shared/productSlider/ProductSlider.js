@@ -1,5 +1,5 @@
 import styles from "./ProductSlider.module.scss";
-import Product from "features/css/product";
+import Product from "features/css/shared/product";
 import Carousel from "react-multi-carousel";
 
 const responsive = {
