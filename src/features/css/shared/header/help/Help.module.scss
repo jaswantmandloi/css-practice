@@ -1,0 +1,18 @@
+.help {
+  background-color: #F3F3F3;
+  color: #444444;
+  z-index: 99;
+
+  ul {
+    li {
+      border-bottom: 1px solid #DDDDDD;
+      padding: 10px 12px;
+    }
+  }
+  display: none;
+}
+
+.active {
+  background-color: #F3F3F3 !important;
+  display: block;
+}

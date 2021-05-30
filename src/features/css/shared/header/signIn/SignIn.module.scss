@@ -1,0 +1,51 @@
+.sigin {
+  background-color: #f3f3f3;
+  color: #444444;
+  position: absolute;
+  z-index: 99;
+  display: none;
+}
+
+.active {
+  background-color: #f3f3f3 !important;
+  display: block;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+  align-items: center;
+
+  div:first-child {
+    color: #444444;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  div:last-child {
+    color: #444444;
+    font-size: 12px;
+  }
+
+  border-bottom: 1px solid #dddddd;
+  
+}
+
+.body {
+}
+
+.userField {
+  label {
+    color: #444444;
+    font-size: 11px;
+  }
+
+  input {
+    height: 36px;
+    width: 290px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    background-color: #ffffff;
+  }
+}
