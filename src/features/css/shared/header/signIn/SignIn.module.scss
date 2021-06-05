@@ -1,14 +1,22 @@
+.button {
+  position: relative;
+}
+
 .sigin {
   background-color: #f3f3f3;
   color: #444444;
   position: absolute;
   z-index: 99;
   display: none;
+  text-align: left;
+  padding: 10px 0px;
 }
 
 .active {
   background-color: #f3f3f3 !important;
   display: block;
+  top: 62px;
+  right: 5px;
 }
 
 .header {
@@ -27,18 +35,31 @@
     color: #444444;
     font-size: 12px;
   }
-
-  border-bottom: 1px solid #dddddd;
-  
+  margin-bottom:10px;
 }
 
 .body {
+  margin: 10px 0px;
+}
+
+.spacer {
+  padding: 0px 15px;
+}
+
+.saparater {
+  border-bottom: 1px solid #dddddd;
 }
 
 .userField {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+
   label {
     color: #444444;
     font-size: 11px;
+    margin-bottom: 5px;
+    padding-left: 5px;
   }
 
   input {
@@ -47,5 +68,51 @@
     border: 1px solid #dddddd;
     border-radius: 3px;
     background-color: #ffffff;
+  }
+}
+
+.rememberMe {
+  label {
+    display: flex;
+    align-items: center;
+
+    input {
+      margin-right: 5px;
+    }
+  }
+  margin-bottom: 10px;
+}
+
+.siginButton {
+  button {
+    border-radius: 18px;
+    background-color: #cc0000;
+    text-align: center;
+    width: 100%;
+
+    font-weight: 500;
+    color: #ffffff;
+    padding: 10px 0px;
+    border: none;
+  }
+  margin: 10px 0px;
+}
+
+.textWithLink {
+  padding: 5px 0px;
+  a {
+    color: #cc0000;
+  }
+}
+
+.shopAsGuest {
+  button {
+    border: 1px solid #cc0000;
+    color: #cc0000;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0px;
+    background-color: transparent;
+    border-radius: 18px;
   }
 }

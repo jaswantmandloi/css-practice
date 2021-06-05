@@ -1,6 +1,5 @@
 import useTogger from "features/css/shared/hooks/useToggle";
 import styles from "./SignIn.module.scss";
-import positionElement from "position-element";
 import { useRef } from "react";
 
 export default function Index() {
@@ -8,45 +7,67 @@ export default function Index() {
 
   const signInRef = useRef(null);
 
-  const handleToggle = function (event) {
-    const { target } = event;
-
+  const handleToggle = function () {
     changeToggle();
-
-    const config = {
-      element: signInRef.current,
-      anchorElement: target,
-      preferredPlacement: "left-bottom",
-      distance: 1,
-      alignmentOffset: 0,
-      autoReposition: true,
-    };
-
-    positionElement(config);
   };
 
   return (
     <>
-      <button onClick={handleToggle} className={isOpen ? styles.active : ""}>
+      <button onClick={handleToggle} className={styles.button}>
         <img src="/css/index/account.png" />
         <span>Sign In</span>
-      </button>
-      <div
-        className={`${styles.sigin} ${isOpen ? styles.active : ""}`}
-        ref={signInRef}
-      >
-        <div className={styles.header}>
-          <div>Sign in</div>
-          <div>Close</div>
-        </div>
 
-        <div className={styles.body}>
-          <div className={styles.userField}>
-            <label>User ID</label>
-            <input type="text" name="userId" />
+        <div
+          className={`${styles.sigin} ${isOpen ? styles.active : ""}`}
+          ref={signInRef}
+        >
+          <div className={`${styles.header} ${styles.spacer}`}>
+            <div>Sign in</div>
+            <div>Close</div>
+          </div>
+
+          <div className={styles.saparater}></div>
+
+          <div className={`${styles.body} ${styles.spacer}`}>
+            <div className={styles.userField}>
+              <label>User ID</label>
+              <input type="text" name="userId" />
+            </div>
+            <div className={styles.userField}>
+              <label>Password</label>
+              <input type="password" name="password" />
+            </div>
+            <div className={styles.rememberMe}>
+              <label>
+                <input type="checkbox" name="rememberMe" /> Save User ID
+              </label>
+            </div>
+            <div className={styles.siginButton}>
+              <button>Sign In</button>
+            </div>
+            <div className={styles.textWithLink}>
+              Forgot <a href="#">User Id</a> or <a href="#">Password</a>
+            </div>
+            <div className={styles.textWithLink}>
+              Federal Government Customers? <a href="#">Click here</a>
+            </div>
+          </div>
+          <div className={styles.saparater}></div>
+          <div className={`${styles.postalCodeEntry} ${styles.spacer}`}>
+            <p>
+              Don’t have a login and want to shop as a guest? Enter your postal
+              code below and start shopping as a guest, right away!
+            </p>
+            <div className={styles.userField}>
+              <label>Postal Code</label>
+              <input type="text" name="postalCode" />
+            </div>
+            <div className={styles.shopAsGuest}>
+              <button>Shop as guest</button>
+            </div>
           </div>
         </div>
-      </div>
+      </button>
     </>
   );
 }
