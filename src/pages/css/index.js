@@ -16,11 +16,15 @@ import Offers from "features/css/index/offers";
 import { useEffect, useState } from "react";
 
 export default function Index() {
-  const [key, setKey] = useState(new Date().getTime());
+  const [key, setKey] = useState(null);
 
   useEffect(() => {
     setKey(new Date().getTime());
   }, []);
+
+  if (!key) {
+    return null;
+  }
 
   return (
     <>
