@@ -1,5 +1,7 @@
 .button {
-  position: relative;
+  @media screen and (min-width: 600px) {
+    position: relative;
+  }
 }
 
 .sigin {
@@ -15,8 +17,12 @@
 .active {
   background-color: #f3f3f3 !important;
   display: block;
-  top: 62px;
+  top: 120px;
   right: 5px;
+
+  @media screen and (min-width: 600px) {
+    top: 62px;
+  }
 }
 
 .header {
@@ -35,7 +41,7 @@
     color: #444444;
     font-size: 12px;
   }
-  margin-bottom:10px;
+  margin-bottom: 10px;
 }
 
 .body {
@@ -68,6 +74,12 @@
     border: 1px solid #dddddd;
     border-radius: 3px;
     background-color: #ffffff;
+  }
+
+  @media screen and (max-width: 600px) {
+    input {
+      width: 100%;
+    }
   }
 }
 
@@ -105,14 +117,16 @@
   }
 }
 
-.shopAsGuest {
-  button {
-    border: 1px solid #cc0000;
-    color: #cc0000;
-    text-align: center;
-    width: 100%;
-    padding: 10px 0px;
-    background-color: transparent;
-    border-radius: 18px;
+.postalCodeEntry {
+  .shopAsGuest {
+    button {
+      border: 1px solid #cc0000;
+      color: #cc0000;
+      text-align: center;
+      width: 100%;
+      padding: 10px 0px;
+      background-color: transparent;
+      border-radius: 18px;
+    }
   }
 }

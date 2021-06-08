@@ -1,11 +1,8 @@
 import useTogger from "features/css/shared/hooks/useToggle";
 import styles from "./SignIn.module.scss";
-import { useRef } from "react";
 
 export default function Index() {
   const { isOpen, changeToggle } = useTogger();
-
-  const signInRef = useRef(null);
 
   const handleToggle = function () {
     changeToggle();
@@ -17,10 +14,7 @@ export default function Index() {
         <img src="/css/index/account.png" />
         <span>Sign In</span>
 
-        <div
-          className={`${styles.sigin} ${isOpen ? styles.active : ""}`}
-          ref={signInRef}
-        >
+        <div className={`${styles.sigin} ${isOpen ? styles.active : ""}`}>
           <div className={`${styles.header} ${styles.spacer}`}>
             <div>Sign in</div>
             <div>Close</div>
@@ -53,6 +47,7 @@ export default function Index() {
             </div>
           </div>
           <div className={styles.saparater}></div>
+
           <div className={`${styles.postalCodeEntry} ${styles.spacer}`}>
             <p>
               Don’t have a login and want to shop as a guest? Enter your postal

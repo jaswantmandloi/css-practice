@@ -13,15 +13,22 @@ import MembershipDetails from "features/css/index/membershipDetails";
 import ItemListing from "features/css/index/itemListing";
 import ProductSlider from "features/css/shared/productSlider";
 import Offers from "features/css/index/offers";
+import { useEffect, useState } from "react";
 
 export default function Index() {
+  const [key, setKey] = useState(new Date().getTime());
+
+  useEffect(() => {
+    setKey(new Date().getTime());
+  }, []);
+
   return (
     <>
       <Head>
         <title>Home Page</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.container}>
+      <div className={styles.container} key={key}>
         <HeaderTop />
         <HeaderMiddle />
         <MegaMenu />
@@ -50,9 +57,9 @@ export default function Index() {
   );
 }
 
-Index.getInitialProps = async (ctx) => {
-  return { query: ctx.query };
-};
+// Index.getInitialProps = async (ctx) => {
+//   return { query: ctx.query };
+// };
 
 const shopCategories = [
   { image: "/css/index/Tea.svg", label: "Breakroom" },
