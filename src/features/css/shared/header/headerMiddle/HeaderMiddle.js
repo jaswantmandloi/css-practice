@@ -1,6 +1,7 @@
 import styles from "./HeaderMiddle.module.scss";
 import Help from "features/css/shared/header/help";
 import SignIn from "features/css/shared/header/signIn";
+import Cart from "features/css/shared/header/cart";
 
 export default function Index() {
   return (
@@ -22,10 +23,7 @@ export default function Index() {
       <div className={styles.buttons}>
         <SignIn />
         <Help />
-        <button>
-          <img src="/css/index/cart .png" />
-          <span>Cart</span>
-        </button>
+        <Cart />
       </div>
     </div>
   );
