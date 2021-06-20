@@ -3,7 +3,7 @@ import Help from "features/css/shared/header/help";
 import SignIn from "features/css/shared/header/signIn";
 import Cart from "features/css/shared/header/cart";
 
-export default function Index() {
+export default function Index({ isLoggedIn, onLogin }) {
   return (
     <div className={styles.header}>
       <img src="/css/index/business advantage.svg" className={styles.logo} />
@@ -21,9 +21,9 @@ export default function Index() {
         </div>
       </div>
       <div className={styles.buttons}>
-        <SignIn />
+        {isLoggedIn ? null : <SignIn onLogin={onLogin} />}
         <Help />
-        <Cart />
+        <Cart isLoggedIn={isLoggedIn} />
       </div>
     </div>
   );

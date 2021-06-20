@@ -1,7 +1,7 @@
 import useTogger from "features/css/shared/hooks/useToggle";
 import styles from "./SignIn.module.scss";
 
-export default function Index() {
+export default function Index({ onLogin }) {
   const { isOpen, changeToggle } = useTogger();
 
   const handleToggle = function () {
@@ -37,7 +37,7 @@ export default function Index() {
               </label>
             </div>
             <div className={styles.siginButton}>
-              <button>Sign In</button>
+              <button onClick={onLogin}>Sign In</button>
             </div>
             <div className={styles.textWithLink}>
               Forgot <a href="#">User Id</a> or <a href="#">Password</a>

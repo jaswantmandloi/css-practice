@@ -17,14 +17,23 @@ import { useEffect, useState } from "react";
 
 export default function Index() {
   const [key, setKey] = useState(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
     setKey(new Date().getTime());
   }, []);
 
-  if (!key) {
-    return null;
-  }
+  const handleLoginClick = () => {
+    setIsLoggedIn(true);
+  };
+
+  const handleLogoutClick = () => {
+    setIsLoggedIn(false);
+  };
+
+  // if (!key) {
+  //   return null;
+  // }
 
   return (
     <>
@@ -33,8 +42,8 @@ export default function Index() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.container} key={key}>
-        <HeaderTop />
-        <HeaderMiddle />
+        <HeaderTop isLoggedIn={isLoggedIn} onLogout={handleLogoutClick} />
+        <HeaderMiddle isLoggedIn={isLoggedIn} onLogin={handleLoginClick} />
         <MegaMenu />
         <Slider />
         <UserInfo />
