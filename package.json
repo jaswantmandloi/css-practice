@@ -28,6 +28,7 @@
     "position-element": "^1.0.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-inner-image-zoom": "^2.0.2",
     "react-mega-menu": "^1.0.1",
     "react-multi-carousel": "^2.6.3",
     "react-slick": "^0.27.13",
