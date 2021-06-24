@@ -2,6 +2,7 @@ import styles from "./HeaderMiddle.module.scss";
 import Help from "features/css/shared/header/help";
 import SignIn from "features/css/shared/header/signIn";
 import Cart from "features/css/shared/header/cart";
+import MyAccount from "features/css/shared/header/myAccount";
 
 export default function Index({ isLoggedIn, onLogin }) {
   return (
@@ -21,7 +22,7 @@ export default function Index({ isLoggedIn, onLogin }) {
         </div>
       </div>
       <div className={styles.buttons}>
-        {isLoggedIn ? null : <SignIn onLogin={onLogin} />}
+        {isLoggedIn ? <MyAccount /> : <SignIn onLogin={onLogin} />}
         <Help />
         <Cart isLoggedIn={isLoggedIn} />
       </div>

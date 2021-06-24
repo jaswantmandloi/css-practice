@@ -49,7 +49,11 @@ export default function Index({ isLoggedIn }) {
                 </div>
               </div>
             </>
-          ) : null}
+          ) : (
+            <div className={styles.withoutLoginMessage}>
+              To use this feature, please sign in as guest or become a member.
+            </div>
+          )}
         </div>
       </button>
     </>

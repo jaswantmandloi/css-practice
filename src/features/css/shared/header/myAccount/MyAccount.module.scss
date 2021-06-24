@@ -1,0 +1,60 @@
+.myAccount {
+  position: absolute;
+  background-color: #f3f3f3;
+  color: #444444;
+  z-index: 99;
+  min-width: 250px;
+  display: none;
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
+
+  text-align: left;
+  flex-direction: column;
+  padding-top: 12px;
+}
+
+.button {
+  @media screen and (min-width: 600px) {
+    position: relative;
+  }
+}
+
+.active {
+  background-color: #f3f3f3 !important;
+  display: flex;
+  top: 120px;
+  right: 0px;
+  @media screen and (min-width: 600px) {
+    top: 62px;
+  }
+}
+
+.header {
+  &> div:first-child {
+    padding-left: 20px;
+    div:first-child {
+      color: #cc0000;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #dddddd;
+}
+
+.body {
+  display: flex;
+}
+
+.primaryPanel {
+  background-color: #f3f3f3;
+  ul {
+    li {
+      padding: 10px 20px 10px;
+      min-width: 150px;
+      border-bottom: 1px solid #dddddd;
+    }
+  }
+}
